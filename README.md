@@ -28,7 +28,7 @@ Plug 'KaitlynEthylia/TreePin'
 ```
 
 ## Demo
-![demo](./static/demo.gif)
+[Temporarily unavailable because technology is difficult, alternatively can be viewed on [imgur](https://i.imgur.com/aLNgm5D.mp4)]
 
 ## Setup
 
@@ -60,6 +60,7 @@ require('treepin').setup {
 | TPGo | `treepin.pinGo()` | Jump to the first line of the pin. |
 | TPShow | `treepin.pinShow()` | Called automatically when a pin is created. Enables displaying the pin buffer. |
 | TPHide | `treepin.pinHide()` | Hides the pin buffer but keeps the pin stored. |
+| TPToggle | `treepin.pinToggle()` | Either runs pinHide or pinShow depending on whether the pin is visible. |
 
 Although there is no user command for it, the
 `treepin.pin(winnr, base, grow, bufnr)` function is also

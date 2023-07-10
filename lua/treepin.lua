@@ -294,6 +294,17 @@ function M.pinHide(winnr)
 	end
 end
 
+--Either runs pinHide or pinShow depending on whether the pin is visible.
+--- @param winnr window? # The window of the pin to be affected. Defaults to the current window.
+function M.pinToggle(winnr)
+	if not winlocals[winnr] then return end
+	if winlocals[winnr].win then
+		M.pinHide(winnr)
+	else
+		M.pinShow(winnr)
+	end
+end
+
 local has_setup = false
 
 --- @param opts TreePinConfig
@@ -316,6 +327,7 @@ function M.setup(opts)
 	vim.api.nvim_create_user_command('TPClear', M.pinClear, {})
 	vim.api.nvim_create_user_command('TPShow', M.pinShow, {})
 	vim.api.nvim_create_user_command('TPHide', M.pinHide, {})
+	vim.api.nvim_create_user_command('TPToggle', M.pinToggle, {})
 	vim.api.nvim_create_user_command('TPGo', M.pinGo, {})
 
 	vim.api.nvim_set_hl(0, 'TreepinPin', { fg = 'LightBlue', default = true })
