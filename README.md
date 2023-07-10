@@ -1,12 +1,8 @@
 # TreePin
-
----
 A lightweight neovim plugin for pinning fragments of code to
 the screen.
 
 ## Install
-
----
 ### Lazy
 ```
 {
@@ -32,8 +28,6 @@ Plug 'KaitlynEthylia/TreePin'
 ```
 
 ## Demo
-
----
 ![demo](./static/demo.gif)
 
 ## Setup
@@ -56,8 +50,6 @@ require('treepin').setup {
 ```
 
 ## Commands
-
----
 | Command | Lua Function | Description |
 | ------- | ------------ | ----------- |
 | TPPin | `treepin.pinLocal()` | Sets the window's pin at the treesitter node under the cursor. |
@@ -78,8 +70,6 @@ Keybindings are down to the user to set themselvs.
 
 ## Future
 
----
-
 Several features have already been considered for future
 versions, particularly:
 
@@ -95,7 +85,5 @@ likely to happen however as it alone could introduce the
 ability for external code to implement the others.
 
 ## Contributing
-
----
 All contributions are welcome! Just follow common sense
 ettiquete and we can create something that works.
