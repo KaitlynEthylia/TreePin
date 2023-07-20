@@ -7,7 +7,7 @@ local tshighlight = vim.treesitter.highlighter
 --- @field position 'relative'|'top'|'bottom' # May be 'relative', 'top', or 'bottom'. Determines the position of the pin buffer within the window.
 --- @field icon? string # The icon to display in the sign column at the top of the pin. Set to nil to prevent the sign column being used.
 --- @field zindex integer # The Z-index of the pin buffer.
---- @field seperator? string # A single character that may be used as a seperator between the editing buffer and the pin buffer.
+--- @field separator? string # A single character that may be used as a separator between the editing buffer and the pin buffer.
 
 --- @type TreePinConfig
 local defaultConfig = {
@@ -16,7 +16,7 @@ local defaultConfig = {
 	position = 'relative',
 	icon = '>',
 	zindex = 50,
-	seperator = nil,
+	separator = nil,
 }
 
 --- @type TreePinConfig
@@ -89,8 +89,8 @@ local function update(winnr)
 			focusable = false,
 			noautocmd = true,
 			zindex = config.zindex,
-			border = config.seperator
-				and { '', '', '', '', config.seperator, config.seperator, config.seperator, '' }
+			border = config.separator
+				and { '', '', '', '', config.separator, config.separator, config.separator, '' }
 		})
 		winlocals[winnr].win = {
 			winid = winid,
